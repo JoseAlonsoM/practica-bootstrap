@@ -95,23 +95,29 @@ https://fontawesome.com/docs/web/setup/host-yourself/webfonts https://fontawesom
 
 
 
-
+<br>
     <i class="fa-solid fa-thumbs-up fa-5x"></i>
+<br> <br>
 <!-- ----------------------------------- -->
+<a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank">https://getbootstrap.com/docs/5.3/getting-started/introduction/</a>
+<a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" target="_blank">https://getbootstrap.com/docs/4.0/getting-started/introduction/</a>
 
-<h1>Grid de Bootstrap</h1>
+
+<br>
+<h1>Grid de Bootstrap (12 col/pos)</h1>
 
 <p>Sirven para estructurar, a nivel de diseño, la información.
     Deben estar dentro de un container. Existen containers de dos tipos:
 </p>
 <div class="container bg-primary text-light">
-    Contenedor ancho fijo "container bg-primary text-light"
+    1 Contenedor ancho fijo "container bg-primary text-light"
   </div>
 <br>
   <div class="container-fluid bg-primary text-light">
-    Contenedor ancho fluído "container-fluid bg-primary text-light"
+    2 Contenedor ancho fluído "container-fluid bg-primary text-light"
   </div>
-<br>
+<br> <br>
+
 
 
 <h1>Usando col sin interfijo</h1>
@@ -121,20 +127,20 @@ https://fontawesome.com/docs/web/setup/host-yourself/webfonts https://fontawesom
 
 <div class="container bg-primary text-light">
     <div class="row">
-      <div class="col">1</div>
-      <div class="col">2</div>
-      <div class="col">3</div>
+      <div class="col">1 "col" dentro del mismo "row"</div>
+      <div class="col">2 "col" dentro del mismo "row"</div>
+      <div class="col">3 "col" dentro del mismo "row"</div>
     </div>
   </div>
-<p>1div class="container bg-primary text-light" --- 2div class="row" --- 3div class="col" x3</p>
-<p>una fila con tres columnas, por tanto, cada columna ocupará 4 posiciones.</p>
+<p>1div class="container bg-primary text-light" --- > 2div class="row" --- > 3div class="col" (x3)
+    Una fila con tres columnas, por tanto, cada columna distribuidas en el grid ocupará 4 posiciones.</p>
 
-<br>
+
   <div class="container">
     <div class="row">
-      <div class="col">1</div>
-      <div class="col">2</div>
-      <div class="col">3</div>
+      <div class="col">1 "col" dentro del mismo "row"</div>
+      <div class="col">2 "col" dentro del mismo "row"</div>
+      <div class="col">3 "col" dentro del mismo "row"</div>
     </div>
     <div class="row">
       <div class="col">1</div>
@@ -164,7 +170,8 @@ https://fontawesome.com/docs/web/setup/host-yourself/webfonts https://fontawesom
       <div class="col">1</div>
     </div>
   </div>
-  <p>Si no especificamos el tamaño de las columnas, por defecto su tamaño se repartirá equitativamente entre las columnas en base a los divs x row/fila.</p>
+  <p>Si no especificamos el tamaño de las columnas, por defecto su tamaño se repartirá equitativamente entre las columnas en base a los divs x row/fila. <br>
+    Solo metemos dentro de un div "row" que esta en un div "container" general tantos div class="col" como queramos</p>
 
 
 <p>  Modificaciones necesarias para tener una página Bootstrap de cuatro columnas. Dentro de un div 4 columnas</p>
@@ -199,29 +206,32 @@ https://fontawesome.com/docs/web/setup/host-yourself/webfonts https://fontawesom
 </div>
 <br>
 
+
+
 <h1>Usando col con interfijo, asignamos un tamaño a las columnas</h1>
 
 <div class="container bg-primary text-light">
     <div class="row">
-      <div class="col-3">1 col-3</div>
-      <div class="col-9">2 col-9</div>
+      <div class="col-3">1 div "col-3"</div>
+      <div class="col-9">2 div "col-9"</div>
     </div>
   </div>
-<p>Si las columnas no caben, Bootstrap la pasará para abajo</p>
+<p>3+9=12</p>
   <div class="container">
     <div class="row">
       <div class="col-3">1 col-3</div>
-      <div class="col-10">2 col-10</div>
+      <div class="col-10">2 col-10 pasa abajo al superar el máximo espacio ancho 3+10=13 X</div>
     </div>
   </div>
+<p>Si las columnas no caben (adaptando ancho pág), Bootstrap la pasará para abajo</p>
 <br>
 
 <p>Cambiar el tamaño de las columnas en función del tamaño de la pantalla
     
 </p>
 <div class="row">
-	<div class="col-12 col-md-3">1</div>
-	<div class="col-12 col-md-9">2</div>
+	<div class="col-12 col-md-3">1 "col-12 col-md-3"</div>
+	<div class="col-12 col-md-9">2 "col-12 col-md-9" pasa abajo si reducimos ancho tamaño página</div>
 </div>
 <p>
     Breakpoints de la rejilla de Bootstrap 5 <br>
@@ -232,41 +242,45 @@ Large (ordenadores de sobremesa)	.col-lg	≥992px <br>
 Extra Large (ordenadores de sobremesa con pantalla grande)	.col-xl	≥1200px <br>
 Extra extra large (ordenadores de sobremesa con pantalla más grande)	.col-xxl	≥1400px</p>
 
-<p>Para lograr que cada columna tenga el tamaño correcto lo que haremos es no especificar el tamaño de las columnas inferiores (utilizando el class col-lg) y de estas forma las columnas se repartirán equitativamente su tamaño.</p>
+<p>Para lograr que cada columna tenga el tamaño correcto lo que haremos es no especificar el tamaño de las columnas inferiores (utilizando el class col-lg) 
+    y de estas forma las columnas se repartirán equitativamente su tamaño.</p>
 <br>
   <div class="container">
     <div class="row">
-      <div class="col-6 col-md-3">1</div>
-      <div class="col-6 col-md-3">2</div>
-      <div class="col-6 col-md-3">3</div>
-      <div class="col-6 col-md-3">4</div>
+      <div class="col-6 col-md-3">1 "col-6 col-md-3"</div>
+      <div class="col-6 col-md-3">2 "col-6 col-md-3"</div>
+      <div class="col-6 col-md-3">3 "col-6 col-md-3"</div>
+      <div class="col-6 col-md-3">4 "col-6 col-md-3"</div>
     </div>
     <div class="row">
-      <div class="col-12 col-md-6 col-lg">1</div>
-      <div class="col-12 col-md-6 col-lg">2</div>
-      <div class="col-12 col-md-6 col-lg">3</div>
-      <div class="col-12 col-md-6 col-lg">4</div>
-      <div class="col-12 col-md-6 col-lg">5</div>
-      <div class="col-12 col-md-6 col-lg">6</div>
-      <div class="col-12 col-md-6 col-lg">7</div>
-      <div class="col-12 col-md-6 col-lg">8</div>
-      <div class="col-12 col-md-6 col-lg">9</div>
-      <div class="col-12 col-md-6 col-lg">10</div>
+      <div class="col-12 col-md-6 col-lg">1 "col-12 col-md-6 col-lg"</div>
+      <div class="col-12 col-md-6 col-lg">2col-lg</div>
+      <div class="col-12 col-md-6 col-lg">3col-lg</div>
+      <div class="col-12 col-md-6 col-lg">4col-lg</div>
+      <div class="col-12 col-md-6 col-lg">5col-lg</div>
+      <div class="col-12 col-md-6 col-lg">6col-lg</div>
+      <div class="col-12 col-md-6 col-lg">7col-lg</div>
+      <div class="col-12 col-md-6 col-lg">8col-lg</div>
+      <div class="col-12 col-md-6 col-lg">9col-lg</div>
+      <div class="col-12 col-md-6 col-lg">10col-lg</div>
     </div>
   </div>
+  <br>
+
+
 
 
 <h1>Offset en Bootstrap</h1>
 <br>
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-6 offset-md-6">1</div>
+      <div class="col-12 col-md-6 offset-md-6">1 "col-12 col-md-6 offset-md-6"</div>
     </div>
     <div class="row">
-      <div class="col-8 offset-md-2">1</div>
+      <div class="col-8 offset-md-2">2 "col-8 offset-md-2"</div>
     </div>
     <div class="row">
-      <div class="col-3 offset-md-0 offset-9">1</div>
+      <div class="col-3 offset-md-0 offset-9">3 "col-3 offset-md-0 offset-9"</div>
     </div>
   </div>
 
@@ -274,32 +288,34 @@ Extra extra large (ordenadores de sobremesa con pantalla más grande)	.col-xxl	�
 <div class="row">
 
     <div class="col order-md-3">
-      Columna 1
+      Columna 1 "col order-md-3"
     </div>
 
     <div class="col order-md-2">
-      Columna 2
+      Columna 2 "col order-md-2"
     </div>
 
     <div class="col order-md-1">
-      Columna 3
+      Columna 3 "col order-md-1"
     </div>
 
   </div>
 
-  <p>*Display</p>
-<span class="d-none d-lg-block">span Visible en grande d-none d-lg-block</span>
-<span class="d-block d-lg-none">Oculto en grande</span>
+  <br>
 
-<span class="d-none d-sm-block">span Oculto en pequeño d-none d-sm-block</span>
-<span class="d-block d-sm-none">Visible en pequeño</span>
+<h1>Display</h1>
+<span class="d-none d-lg-block">span Visible en grande "d-none d-lg-block"</span>
+<span class="d-block d-lg-none">span oculto</span>
 
-
+<span class="d-none d-sm-block">span Oculto en pequeño "d-block d-sm-none"</span>
+<span class="d-block d-sm-none">span oculto</span>
+<br>
 <p>Posibles valores:
     none | inline | inline-block | block | table | table-cell | table-row | flex | inline-flex</p>
+<br>
 
 <h1>Alinear componentes Horizontalmente</h1>
-<p>Para ello aplicaremos los siguientes class aplicados en la row</p>
+<p>Para ello aplicaremos los siguientes class aplicados en la row:</p>
 <br>
 <p>row justify-content-start</p>
 <div class="container">
@@ -333,38 +349,38 @@ Extra extra large (ordenadores de sobremesa con pantalla más grande)	.col-xxl	�
   </div>
 </div>
 
+<br>
+
 <h1>Alinear componentes Verticalmente</h1>
 <p>Para ello usaremos los siguientes class aplicados en la row:</p>
 <br>
 <p>row align-items-start</p>
 <div class="container">
   <div class="row align-items-start">
-    <div class="col-2">1</div>
+    <div class="col-2">1 Arriba START</div>
     <div class="col-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, asperiores nihil dolorum a, nam
-      quos dolor necessitatibus temporibus sapiente aut alias, dicta officia. Aut voluptatem cumque quisquam,
-      molestiae, ipsam laboriosam.</div>
+      quos dolor necessitatibus temporibus sapiente aut alias, dicta officia.</div>
   </div>
 </div>
 <br>
 <p>row align-items-center</p>
 <div class="container">
   <div class="row align-items-center">
-    <div class="col-2">1</div>
+    <div class="col-2">2 En medio CENTER</div>
     <div class="col-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, asperiores nihil dolorum a, nam
-      quos dolor necessitatibus temporibus sapiente aut alias, dicta officia. Aut voluptatem cumque quisquam,
-      molestiae, ipsam laboriosam.</div>
+      quos dolor necessitatibus temporibus sapiente aut alias, dicta officia.</div>
   </div>
 </div>
 <br>
 <p>row align-items-end</p>
 <div class="container">
   <div class="row align-items-end">
-    <div class="col-2">1</div>
+    <div class="col-2">3 Abajo END</div>
     <div class="col-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, asperiores nihil dolorum a, nam
-      quos dolor necessitatibus temporibus sapiente aut alias, dicta officia. Aut voluptatem cumque quisquam,
-      molestiae, ipsam laboriosam.</div>
+      quos dolor necessitatibus temporibus sapiente aut alias, dicta officia.</div>
   </div>
 </div>
+<br>
 
 <h1>Margins y Padings</h1>
 <p>Podemos usar los siguientes class: class="mt-0 me-1 mb-2 ms-3 pt-0 pe-1 pb-2 ps-3"</p>
@@ -396,28 +412,49 @@ Extra extra large (ordenadores de sobremesa con pantalla más grande)	.col-xxl	�
 <p>El número indica la magnitud del margen o el padding.</p>
 <br>
 
-<h1>Text
-    text-align</h1>
-    <p class="text-start">Left aligned text on all viewport sizes.</p>
-    <p class="text-center">Center aligned text on all viewport sizes.</p>
-    <p class="text-end">Right aligned text on all viewport sizes.</p>
+<h1>Text text-align</h1>
+    <p class="text-start">p class "text-start" Left aligned text on all viewport sizes.</p>
+    <p class="text-center">"text-center" Center aligned text on all viewport sizes.</p>
+    <p class="text-end">"text-end" Right aligned text on all viewport sizes.</p>
     
-    <p class="text-sm-start">Left aligned text on viewports sized SM (small) or wider.</p>
-    <p class="text-md-start">Left aligned text on viewports sized MD (medium) or wider.</p>
-    <p class="text-lg-start">Left aligned text on viewports sized LG (large) or wider.</p>
-    <p class="text-xl-start">Left aligned text on viewports sized XL (extra-large) or wider.</p>
+    <p class="text-sm-start">"text-sm-start" Left aligned text on viewports sized SM (small) or wider.</p>
+    <p class="text-md-start">"text-md-start" Left aligned text on viewports sized MD (medium) or wider.</p>
+    <p class="text-lg-start">"text-lg-start" Left aligned text on viewports sized LG (large) or wider.</p>
+    <p class="text-xl-start">"text-xl-start" Left aligned text on viewports sized XL (extra-large) or wider.</p>
 
 
 
 <h1>Estilo de texto</h1>
-<p>fw-bold → negrita 
-fw-light 
-fw-lighter 
-fst-italic  → cursiva</p>
+<p>
+fw-bold → negrita <br>
+fw-light <br>
+fw-lighter <br>
+fst-italic  → cursiva
+</p>
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-2"><p class="fw-bold text-light bg-dark">fw-bold</p></div>
+      <div class="col-2"><p class="fst-italic">fst-italic</p></div>
+      <div class="col-2"><p class="fw-lighter text-center">fw-lighter</p></div>
+      <div class="col-2"><p class="fw-light text-center">fw-light</p></div>
+    </div>
+  </div>
+<p class="text-primary">.text-primary</p>
+<p class="text-secondary">.text-secondary</p>
+<p class="text-success">.text-success</p>
+<p class="text-danger">.text-danger</p>
+<p class="text-warning">.text-warning</p>
+<p class="text-info">.text-info</p>
+<p class="text-light bg-dark">.text-light</p>
+<p class="text-dark">.text-dark</p>
+<p class="text-muted">.text-muted</p>
+<p class="text-white bg-dark">.text-white</p>
 <br>
 
 <h1>Colores</h1>
-<p> bg-primary | bg-success | bg-info | bg-warning | bg-danger | bg-secondary | bg-dark | bg-light</p>
+<br>
+<p>Fondo / Background</p>
+<p> bg-primary | bg-success | bg-info | bg-warning | bg-danger | bg-secondary | bg-dark | bg-light </p>
 <br>
 
 <h1>Border </h1>
@@ -450,13 +487,14 @@ fst-italic  → cursiva</p>
 
 <h1>Width</h1>
 <p>w-25 | w-50 | w-75 | w-100</p>
-<div class="w-25 bg-warning">Width 25%</div> → width: 25%
-<div class="mw-100 bg-warning">Max Width 100%</div> → max-width: 100%
-<div class="min-vw-100 bg-warning">Min-width 100vw</div> → min-width: 100vw
-<br>
+<div class="w-25 bg-warning">Width 25% "w-25 bg-warning"</div> → width: 25%
+<div class="mw-100 bg-warning">Max Width 100% "mw-100 bg-warning"</div> → max-width: 100%
+<div class="min-vw-100 bg-warning">Min-width 100vw "min-vw-100 bg-warning"</div> → min-width: 100vw
+<br><br>
+
+
 
 <h1>Formularios</h1>
-
 
 <div class="container">
 
@@ -514,7 +552,7 @@ Añadimos el class form-control a los inputs, selects y textareas, para mejorar 
 
 <div class="container">
     <h2>Pasamos de una fila row a form-row y dentro inputs con form-control</h2>
-    <p>form-row:
+    <p>
         Una form-row es como una row, pero más cortita y con menos padding</p>
     <div class="form-row">
       <div class="col"><input class="form-control" type="text" placeholder="col dentro de una form-row" /></div>
@@ -532,8 +570,9 @@ Añadimos el class form-control a los inputs, selects y textareas, para mejorar 
 <hr>
 
 <h1>Componentes en Bootstrap</h1>
-<p>https://getbootstrap.com/docs/5.0/components/</p>
 
+
+<a href="https://getbootstrap.com/docs/5.0/components/" target="_blank">componentes</a>
 
 
 
@@ -926,6 +965,11 @@ link rel="stylesheet" href="./node_modules//bootstrap-icons/font/bootstrap-icons
 <a href="https://bootswatch.com/" target="_blank">bootswatch.com</a>
 <p>Hipervínculos el atributo src para "vincular" la fuente de una imagen, la etiqueta de enlace (link) con el atributo href para "enlazar" la fuente de una hoja de estilo,
     las etiquetas de anclaje (anchor), existe el atributo href para "vincular" la sección con id o class o página de referencias del directorio /pagina.</p>
+    <p>_blank	Opens the linked document in a new window or tab
+        _self	Opens the linked document in the same frame as it was clicked (this is default)
+        _parent	Opens the linked document in the parent frame
+        _top	Opens the linked document in the full body of the window
+        framename	Opens the linked document in the named iframe</p>
 
 
 
