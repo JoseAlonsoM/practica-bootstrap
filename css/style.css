@@ -1,0 +1,118 @@
+/*PREAJUSTES CSS / HOJA DE ESTILO*/
+/*Este *{} selector universal se aplica a todos y cada uno de los elementos del archivo html.
+Aplicación de dimensiones de elementos de mar0 pad0 para eliminar margen y relleno predeterminado de cada elemento html.*/
+/*La box-sizing propiedad nos permite incluir el relleno y el borde en el ancho y alto total de un elemento.
+Si establece box-sizing: border-box;en un elemento, el relleno y el borde se incluyen en el ancho y el alto
+Border-box le dice al navegador que tenga en cuenta cualquier borde y relleno en los valores que especifique para el ancho y alto de un elemento.
+Incluirán cualquier borde o relleno que haya agregado, el cuadro de contenido se encogerá para absorber ese ancho adicional,
+medidas se mantendrá así sin importar el relleno, margen o borde que agregue.
+*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Ajustes de estilo en Textos
+Tipografía Trutype .TFF o OpenType .OTF a aplicar llamando a la hoja de estilos vinculando los parrafos y a la ruta
+Font-face fuente personalizada font-family: MiFuentePersonal, sans-serif; */
+@font-face {
+    font-family: 'Open Sans' !important;
+    /*Antes de descargar el archivo, le decimos al buscador que intente buscar en local la fuente con ese nombre*/
+    src: 
+    local('Open Sans'),
+    url("../font/OpenSans-VariableFont_wdth,wght.ttf") format('truetype');
+    /*propiedades*/
+    font-style: normal;
+    font-weight: 400;
+    }
+/*Fuentes con aspecto similar, alternativa estándar, para aplicar a todo el html*/
+html {
+	font-family: 'Open Sans', Nunito, Verdana, Arial, Helvetica, sans-serif;
+	/*Otras comunes Geneva, Trebuchet, Tahoma, Futura, Calibri, Candara, Optima,*/
+	font-size: 16px;
+	/*Responsive para pantallas móviles es 16-18 pixeles. 16px en Unidad Relativa: 1rem (base)*/
+	/*font-size: normal;*/
+	text-decoration: none;
+}
+
+
+body{
+    max-width: 1024px ;
+    margin: 0 auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/*.contenidoPrincipal {
+    padding-left: 20%;
+    padding-right: 20%;
+}*/
+
+
+
+
+/* HEADER */
+.portadaHeroBanner {
+    background-image: url('img/header.jpg');
+        /* // establecer el tamaño y no permitir repetición de la imagen */
+    /* Escala el alto de la imagen de fondo al alto del elemento. */
+    /* background-size : contain; */
+    /* Escala el ancho de la imagen de fondo al ancho del elemento.*/
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    /* width: 100%; */
+    /* // Debe incluir la altura height: 100vh; */
+    background-repeat : no-repeat;
+    /* background-image: gradient(linear, left top, left bottom,); */
+}
+
+.txtheroImage {
+padding-top: 120px;
+padding-left: 5%;
+text-align: left;
+font-size:20px;
+color: white;
+
+}
+
+nav{
+    background-color: rgba(44, 10, 87, 0.684);
+    padding-left: 5%;
+}
+ul{
+    list-style-type: none;
+    margin:0px;
+    padding: 5px;
+}
+
+li{
+    display: inline-block;
+}
+
+.menu{
+    display:flex;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    text-align: justify;
+}
+
+.menu:hover{
+    /*background-color:white ;*/
+    color: rgba(44, 10, 87, 0.684);
+}
+
+
+
+
+/*section {
+    padding-left: 15%;
+    padding-right: 15%; 
+}*/
+
+/* --------------------------------------------- */
+
+
+

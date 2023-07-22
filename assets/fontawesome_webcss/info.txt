@@ -1,0 +1,7 @@
+En la /csscarpeta, es posible que haya notado un archivo llamado all.css. Este archivo contiene el estilo principal y las utilidades MÁS todos los íconos en todos los estilos clásicos en Font Awesome. (La familia Sharp no está incluida en el all.cssarchivo; deberá agregar los .cssarchivos Sharp por separado).
+
+Es un archivo útil si va a utilizar todos los estilos de iconos o probar diferentes estilos a medida que desarrolla su proyecto. Pero si usa solo un par de estilos, no lo recomendamos para sitios de producción, ya que cargar todos los íconos y archivos no es excelente para el rendimiento.
+
+Si desea utilizar el all.css, simplemente copie la /webfontscarpeta y el /css/all.cssarchivo en el directorio de activos de su proyecto donde se almacenan otras imágenes y CSS. Deberá mantenerlos en el mismo directorio.
+
+Luego, agregue un enlace al /your-path-to-fontawesome/css/all.cssarchivo en <head>cada plantilla o página donde desee usar Font Awesome.
